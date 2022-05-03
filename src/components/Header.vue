@@ -1,68 +1,30 @@
 <template>
   <header>
-    <nav>
-      <div v-if="showMenu" class="nav-content" :class="{ showMenu }">
-        <ul>
-          <li>
-            <router-link to="/">Editar Perfil</router-link>
-          </li>
-          <li>
-            <router-link to="/about">Sobre</router-link>
-          </li>
-          <li>
-            <router-link to="/leave">Sair</router-link>
-          </li>
-        </ul>
-      </div>
-      <button class="nav-overlay" v-if="showMenu" @click="showMenu = !showMenu"></button>
-      <a href="#" @click="showMenu = !showMenu">
-        <img src="../assets/menu.svg" alt="Menu" />
-      </a>
-    </nav>
+    <Nav />
+    <UserInput class="center" />
   </header>
 </template>
 
 <script>
+import Nav from "./Nav.vue";
+import UserInput from "./UserInput.vue";
 export default {
-  data() {
-    return {
-      showMenu: false,
-    };
+  components: {
+    Nav,
+    UserInput,
   },
+  data() {},
 };
 </script>
 
 <style scoped>
 header {
   display: flex;
+  align-items: center;
   padding: 3.5rem;
   position: relative;
 }
-.nav-content {
-  background: var(--background--darker-color);
-  height: 100vh;
-  width: 20vw;
-  padding: 3.6rem;
-}
-.nav-content.showMenu {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.nav-content ul li {
-  margin: 1.1rem 0;
-}
-.nav-content ul li a {
-  font-size: 1.6rem;
-  font-weight: 500;
-  display: block;
-}
-.nav-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(60, 99, 130, 0.26);
-  height: 100vh;
-  width: 80vw;
+.center {
+  margin: auto
 }
 </style>
