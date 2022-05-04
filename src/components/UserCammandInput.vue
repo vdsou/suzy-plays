@@ -20,10 +20,6 @@ export default {
 };
 </script>
 <style scoped>
-  .home-content {
-    width: 40rem;
-    margin: 0 auto;
-  }
   .home-content i {
     display: flex;
   }

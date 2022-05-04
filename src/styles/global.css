@@ -9,7 +9,9 @@
   --text-links-color: #1e3799;
   --background-buttons-color: #c4c4c4;
   --danger-color: #b71540;
-  --green-color: #38ada9;
+  --green-color-1: #b8e994;
+  --green-color-2: #78e08f;
+  --green-color-3: #38ada9;
 }
 * {
   margin: 0;
@@ -22,6 +24,16 @@
   font-family: "Inter", sans-serif;
   color: var(--white-color);
 }
+*::-webkit-scrollbar {
+  width: 1rem;
+}
+*::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 20px;
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -29,4 +41,9 @@ html {
 }
 body {
   background: var(--background-color);
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 #e0e0e0;
+}
+.home-content {
+  width: 40rem;
 }

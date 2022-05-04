@@ -1,13 +1,15 @@
 <template>
   <div class="home">
     <UserCammandInput />
+    <UserCommandList />
   </div>
 </template>
 <script>
-import UserCammandInput from '../components/UserCammandInput.vue';
+import UserCammandInput from "../components/UserCammandInput.vue";
+import UserCommandList from "../components/UserCommandList.vue";
 export default {
   name: "Home",
-  components: {UserCammandInput},
+  components: { UserCammandInput, UserCommandList },
 };
 </script>
 <style scoped>
@@ -17,6 +19,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 </style>
