@@ -60,7 +60,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  background: rgba(60, 99, 130, 0.26);
+  background: rgba(60, 99, 130, 0.85);
   height: 100vh;
   width: 80vw;
 }
