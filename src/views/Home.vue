@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <section class="home">
     <UserCammandInput />
     <UserCommandList />
-  </div>
+  </section>
 </template>
 <script>
 import UserCammandInput from "../components/UserCammandInput.vue";
@@ -13,12 +13,5 @@ export default {
 };
 </script>
 <style scoped>
-.home {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 </style>
