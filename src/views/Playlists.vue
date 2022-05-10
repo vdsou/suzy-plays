@@ -131,7 +131,7 @@ export default {
 
 <style scoped>
 .playlists .playlists-list {
-  width: 60%;
+  width: 45%;
 }
 .playlists .playlists-list .playlists-list-title {
   margin: 3.5rem;
@@ -188,7 +188,7 @@ export default {
 }
 .playlists .playlist-list-save-button {
   background: var(--green-color-3);
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
   color: var(--text-links-color);
   font-weight: bold;
