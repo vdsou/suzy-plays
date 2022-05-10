@@ -47,7 +47,7 @@ body {
 .home-content {
   width: 40rem;
 }
-.home, .playlists{
+.home, .playlists, .signin{
   min-height: 100vh;
   width: 100%;
   display: flex;
