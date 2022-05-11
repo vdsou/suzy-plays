@@ -38,55 +38,55 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .settings {
   margin: 3.5rem;
-}
-.settings .settings-title {
-  display: flex;
-  align-items: center;
-}
-.settings-form {
-  display: flex;
-  height: 40rem;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.settings-form input {
-  width: 24rem;
-  height: 3rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 0.6rem 0;
-  color: #000;
-}
-.settings-form label {
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-.settings-form input::placeholder {
-  color: var(--grey-color);
-}
-.settings-form .update-username,
-.settings-form .update-password {
-  display: flex;
-  flex-direction: column;
-}
-.settings-form button {
-  width: 7rem;
-  height: 3.5rem;
-  font-weight: bold;
-  background: #079992;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-.delete-account {
-  background: var(--danger-color);
-  padding: 0.8rem 1.2rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  cursor: pointer;
+  .settings-title {
+    display: flex;
+    align-items: center;
+  }
+  .settings-form {
+    display: flex;
+    height: 40rem;
+    flex-direction: column;
+    justify-content: space-around;
+    input {
+      width: 24rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 0.6rem 0;
+      color: #000;
+      &::placeholder {
+        color: var(--grey-color);
+      }
+    }
+    label {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+    .update-username,
+    .update-password {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      width: 7rem;
+      height: 3.5rem;
+      font-weight: bold;
+      background: #079992;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+  .delete-account {
+    background: var(--danger-color);
+    padding: 0.8rem 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
 }
 </style>

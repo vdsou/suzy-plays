@@ -17,14 +17,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   display: flex;
   align-items: center;
   padding: 3.5rem;
   position: relative;
-}
-.center {
-  margin: auto
+  .center {
+    margin: auto;
+  }
 }
 </style>

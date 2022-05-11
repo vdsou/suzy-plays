@@ -63,43 +63,43 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .home-content {
   width: 48rem;
   padding-left: 4rem;
-}
-.home-content .commands-box {
-  margin: 4rem 0;
-  height: 25.4rem;
-  overflow-y: auto;
-}
-.home-content .commands-box ul {
-  text-transform: uppercase;
-}
-.home-content .commands-box ul li {
-  background: var(--green-color-1);
-  margin-bottom: 2rem;
-  height: 3.5rem;
-  width: 40rem;
-  border-radius: 0.5rem;
-}
-.home-content .commands-box ul li .command {
-  padding: 0 1.3rem 0 2.3rem;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.home-content .commands-box ul li .command span {
-  color: var(--text-links-color);
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-.home-content .commands-box ul li .command button {
-  background: none;
-  cursor: pointer;
-  display: flex;
+  .commands-box {
+    margin: 4rem 0;
+    height: 25.4rem;
+    overflow-y: auto;
+  }
+  .commands-box ul {
+    text-transform: uppercase;
+  }
+  .commands-box ul li {
+    background: var(--green-color-1);
+    margin-bottom: 2rem;
+    height: 3.5rem;
+    width: 40rem;
+    border-radius: 0.5rem;
+    .command {
+      padding: 0 1.3rem 0 2.3rem;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: var(--text-links-color);
+        font-weight: bold;
+        font-size: 1.8rem;
+      }
+      button {
+        background: none;
+        cursor: pointer;
+        display: flex;
+      }
+    }
+  }
 }
 </style>

@@ -6,9 +6,13 @@
     </h1>
   </div>
 </template>
-<style scoped>
-.about i img {
-  transform: translateY(15%);
-  margin: 0 0.5rem;
+<style lang="scss" scoped>
+.about {
+  h1 {
+    i img {
+      transform: translateY(15%);
+      margin: 0 0.5rem;
+    }
+  }
 }
 </style>

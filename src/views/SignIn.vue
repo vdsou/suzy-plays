@@ -21,54 +21,55 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .signin {
   display: flex;
   justify-content: center;
-}
-.signin .signin-title {
-  display: flex;
-  flex-direction: column;
-}
-.signin .signin-title h1{
-  font-size: 2.5rem;
-}
-.signin .signin-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 34rem;
-  margin-top: 1.7rem;
-}
-.signin .signin-form input,
-.signin .signin-form button {
-  margin: 1.7rem 0;
-  margin-top: 0;
-  height: 3rem;
-  text-align: center;
-  border-radius: 5rem;
-  color: #000;
-}
-.signin .signin-form input::placeholder {
-  color: var(--grey-color);
-}
-.signin .signin-form button {
-  color: var(--grey-color);
-  cursor: pointer;
-  background: var(--background--darker-color);
-  font-weight: bold;
-}
-p {
-  text-align: center;
-  color: var(--grey-color);
-}
-p,
-a {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-p a {
-  color: var(--text-links-color);
-  font-weight: 400;
+  .signin-title {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .signin-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 34rem;
+    margin-top: 1.7rem;
+    input,
+    button {
+      margin: 1.7rem 0;
+      margin-top: 0;
+      height: 3rem;
+      text-align: center;
+      border-radius: 5rem;
+      color: #000;
+    }
+
+    input::placeholder {
+      color: var(--grey-color);
+    }
+    button {
+      color: var(--grey-color);
+      cursor: pointer;
+      background: var(--background--darker-color);
+      font-weight: bold;
+    }
+  }
+  p {
+    text-align: center;
+    color: var(--grey-color);
+    a {
+      color: var(--text-links-color);
+      font-weight: 400;
+    }
+  }
+  p,
+  a {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 </style>

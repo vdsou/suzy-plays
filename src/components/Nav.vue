@@ -45,35 +45,35 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .nav-content {
   background: var(--background--darker-color);
   height: 100vh;
   width: 20vw;
   padding: 3.6rem;
-}
-.nav-content .user-menu-info {
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-}
-.nav-content .user-menu-info h2 {
-  margin-left: 2.9rem;
-}
-.nav-content.showMenu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-}
-.nav-content ul li {
-  margin: 1.1rem 0;
-}
-.nav-content ul li a {
-  font-size: 1.6rem;
-  font-weight: 500;
-  display: block;
+  .user-menu-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    img {
+      margin-right: 2.9rem;
+    }
+  }
+  &.showMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  ul li {
+    margin: 1.1rem 0;
+  }
+  ul li a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+  }
 }
 .nav-overlay {
   position: fixed;
