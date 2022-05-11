@@ -1,7 +1,16 @@
 <template>
   <nav>
     <div v-if="showMenu" class="nav-content" :class="{ showMenu }">
+      <div class="user-menu-info">
+        <i>
+          <img src="../assets/content/user-icon.svg" alt="Ícone de Usuário" />
+        </i>
+        <h2>Chico de Loba</h2>
+      </div>
       <ul>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
         <li>
           <router-link to="/settings">Editar Perfil</router-link>
         </li>
@@ -42,6 +51,14 @@ export default {
   height: 100vh;
   width: 20vw;
   padding: 3.6rem;
+}
+.nav-content .user-menu-info {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.nav-content .user-menu-info h2 {
+  margin-left: 2.9rem;
 }
 .nav-content.showMenu {
   position: fixed;
