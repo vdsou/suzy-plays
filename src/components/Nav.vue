@@ -3,7 +3,7 @@
     <div v-if="showMenu" class="nav-content" :class="{ showMenu }">
       <ul>
         <li>
-          <router-link to="/">Editar Perfil</router-link>
+          <router-link to="/settings">Editar Perfil</router-link>
         </li>
         <li>
           <router-link to="/about">Sobre</router-link>
@@ -44,9 +44,11 @@ export default {
   padding: 3.6rem;
 }
 .nav-content.showMenu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  z-index: 2;
 }
 .nav-content ul li {
   margin: 1.1rem 0;
@@ -57,9 +59,11 @@ export default {
   display: block;
 }
 .nav-overlay {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 0;
   right: 0;
+  bottom: 0;
   background: rgba(60, 99, 130, 0.85);
   height: 100vh;
   width: 80vw;

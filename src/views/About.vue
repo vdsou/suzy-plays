@@ -1,5 +1,14 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>
+      Desenvolvido com<i><img src="../assets/heart.svg" alt="com amor" /></i>por
+      <a href="https://github.com/vdsou/suzy-plays" target="_blank"> vdsou </a>
+    </h1>
   </div>
 </template>
+<style scoped>
+.about i img {
+  transform: translateY(15%);
+  margin: 0 0.5rem;
+}
+</style>
