@@ -19,32 +19,34 @@ export default {
   components: {},
 };
 </script>
-<style scoped>
-  .home-content i {
-    display: flex;
-  }
+<style lang="scss" scoped>
+.home-content {
   .title {
     display: flex;
-  }
-  .title h1 {
-    font-size: 1.6rem;
-    line-height: 19px;
-    margin: 0 1.2rem;
+    h1 {
+      font-size: 1.6rem;
+      line-height: 19px;
+      margin: 0 1.2rem;
+    }
+    i {
+      display: flex;
+    }
   }
   .form {
     width: inherit;
     margin-top: 2.2rem;
+    .user-command-input {
+      width: 100%;
+      height: 3.5rem;
+      margin: 0 auto;
+      color: #000;
+      text-align: center;
+      font-size: 1.2rem;
+      border-radius: 0.5rem;
+      &::placeholder {
+        color: var(--grey-color);
+      }
+    }
   }
-  .form .user-command-input {
-    width: 100%;
-    height: 3.5rem;
-    margin: 0 auto;
-    color: #000;
-    text-align: center;
-    font-size: 1.2rem;
-    border-radius: 0.5rem;
-  }
-  .form .user-command-input::placeholder {
-    color: var(--grey-color);
-  }
+}
 </style>
