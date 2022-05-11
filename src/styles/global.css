@@ -44,11 +44,19 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #c4c4c4 #e0e0e0;
 }
+#app {
+  min-height: 100vh;
+  z-index: 1;
+}
 .home-content {
   width: 40rem;
 }
-.home, .playlists, .signin, .signup, .about{
-  min-height: 100vh;
+.home,
+.playlists,
+.signin,
+.signup,
+.about {
+  min-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
