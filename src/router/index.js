@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Playlists from "../views/Playlists.vue";
 import Settings from "../views/Settings.vue";
 import SignIn from "../views/SignIn.vue";
+import SignUp from "../views/SignUp.vue";
 
 const routes = [
   {
@@ -33,6 +34,11 @@ const routes = [
     path: "/signin",
     name: "SignIn",
     component: SignIn,
+  },
+  {
+    path: "/signup",
+    name: "SignUp",
+    component: SignUp,
   },
 ];
 

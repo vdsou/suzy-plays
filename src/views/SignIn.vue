@@ -10,7 +10,7 @@
         <input type="password" placeholder="insira sua senha" />
         <button type="submit">ENTRAR</button>
       </form>
-      <p>Não é cadastrado? <a href="#">Clique aqui</a></p>
+      <p>Não é cadastrado? <a href="/signup">Clique aqui</a></p>
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 26rem;
+  width: 34rem;
   margin-top: 1.7rem;
 }
 .signin .signin-form input,
