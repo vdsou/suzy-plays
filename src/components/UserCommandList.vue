@@ -1,10 +1,14 @@
 <template>
   <div class="home-content">
     <div class="commands-box">
-      <ul class="commands-box-list" v-for="command in commands" :key="command.id">
-        <li>
+      <ul
+        class="commands-box-list"
+        v-for="(command, key) in commands"
+        :key="command.id"
+      >
+        <li :style="{ background: `var(${colors[key % colors.length]})` }">
           <div class="command">
-            <span>{{command.command_name}}</span>
+            <span>{{ command.playlist_title }}</span>
             <i>
               <button type="button">
                 <img src="../assets/trash-can.svg" alt="" />
@@ -23,12 +27,19 @@ import { onMounted, ref } from "vue";
 export default {
   name: "UserCommandList",
   setup() {
+    const colors = ref([
+      "--green-color-1",
+      "--green-color-2",
+      "--green-color-3",
+    ]);
     const commands = ref([]);
-    const fetchCommands = () => api.get("/commands").then(({ data }) => commands.value = data);
+    const fetchCommands = () =>
+      api.get("/commands").then(({ data }) => (commands.value = data));
     onMounted(fetchCommands);
-    return{
-      commands
-    }
+    return {
+      commands,
+      colors,
+    };
   },
 };
 </script>
