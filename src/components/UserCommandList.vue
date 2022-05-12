@@ -1,50 +1,10 @@
 <template>
   <div class="home-content">
     <div class="commands-box">
-      <ul class="commands-box-list">
+      <ul class="commands-box-list" v-for="command in commands" :key="command.id">
         <li>
           <div class="command">
-            <span>chico</span>
-            <i>
-              <button type="button">
-                <img src="../assets/trash-can.svg" alt="" />
-              </button>
-            </i>
-          </div>
-        </li>
-        <li>
-          <div class="command">
-            <span>light feed</span>
-            <i>
-              <button type="button">
-                <img src="../assets/trash-can.svg" alt="" />
-              </button>
-            </i>
-          </div>
-        </li>
-        <li>
-          <div class="command">
-            <span>helena</span>
-            <i>
-              <button type="button">
-                <img src="../assets/trash-can.svg" alt="" />
-              </button>
-            </i>
-          </div>
-        </li>
-        <li>
-          <div class="command">
-            <span>rock pesado</span>
-            <i>
-              <button type="button">
-                <img src="../assets/trash-can.svg" alt="" />
-              </button>
-            </i>
-          </div>
-        </li>
-        <li>
-          <div class="command">
-            <span>kpop</span>
+            <span>{{command.command_name}}</span>
             <i>
               <button type="button">
                 <img src="../assets/trash-can.svg" alt="" />
@@ -58,8 +18,18 @@
 </template>
 
 <script>
+import api from "@/services/api";
+import { onMounted, ref } from "vue";
 export default {
   name: "UserCommandList",
+  setup() {
+    const commands = ref([]);
+    const fetchCommands = () => api.get("/commands").then(({ data }) => commands.value = data);
+    onMounted(fetchCommands);
+    return{
+      commands
+    }
+  },
 };
 </script>
 
