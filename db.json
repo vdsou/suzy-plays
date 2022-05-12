@@ -2,23 +2,23 @@
   "commands": [
     {
       "id": 1,
-      "userCommand": "chico"
+      "command_name": "chico"
     },
     {
       "id": 2,
-      "userCommand": "light feed"
+      "command_name": "light feed"
     },
     {
       "id": 3,
-      "userCommand": "helena"
+      "command_name": "helena"
     },
     {
       "id": 3,
-      "userCommand": "rock pesado"
+      "command_name": "rock pesado"
     },
     {
       "id": 3,
-      "userCommand": "kpop"
+      "command_name": "kpop"
     }
   ],
   "playlists": [
