@@ -1,0 +1,74 @@
+{
+  "commands": [
+    {
+      "id": 1,
+      "userCommand": "chico"
+    },
+    {
+      "id": 2,
+      "userCommand": "light feed"
+    },
+    {
+      "id": 3,
+      "userCommand": "helena"
+    },
+    {
+      "id": 3,
+      "userCommand": "rock pesado"
+    },
+    {
+      "id": 3,
+      "userCommand": "kpop"
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "title": "SAOKO - ROSALÍA",
+      "image_url": "../assets/content/card-icon.svg",
+      "duration": "02:27",
+      "created_at": "",
+      "created_by": "Chico de Loba"
+    },
+    {
+      "id": 2,
+      "title": "SAOKO - ROSALÍA",
+      "image_url": "../assets/content/card-icon.svg",
+      "duration": "02:27",
+      "created_at": "",
+      "created_by": "Chico de Loba"
+    },
+    {
+      "id": 3,
+      "title": "SAOKO - ROSALÍA",
+      "image_url": "../assets/content/card-icon.svg",
+      "duration": "02:27",
+      "created_at": "",
+      "created_by": "Chico de Loba"
+    },
+    {
+      "id": 4,
+      "title": "SAOKO - ROSALÍA",
+      "image_url": "../assets/content/card-icon.svg",
+      "duration": "02:27",
+      "created_at": "",
+      "created_by": "Chico de Loba"
+    },
+    {
+      "id": 5,
+      "title": "SAOKO - ROSALÍA",
+      "image_url": "../assets/content/card-icon.svg",
+      "duration": "02:27",
+      "created_at": "",
+      "created_by": "Chico de Loba"
+    },
+    {
+      "id": 6,
+      "title": "SAOKO - ROSALÍA",
+      "image_url": "../assets/content/card-icon.svg",
+      "duration": "02:27",
+      "created_at": "",
+      "created_by": "Chico de Loba"
+    }
+  ]
+}
