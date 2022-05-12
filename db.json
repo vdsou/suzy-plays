@@ -2,73 +2,135 @@
   "commands": [
     {
       "id": 1,
+      "playlist_title": "chico",
       "command_name": "chico"
     },
     {
       "id": 2,
-      "command_name": "light feed"
+      "playlist_title": "light feed",
+      "command_name": "lightfeed"
     },
     {
       "id": 3,
+      "playlist_title": "helena",
       "command_name": "helena"
     },
     {
-      "id": 3,
-      "command_name": "rock pesado"
-    },
-    {
-      "id": 3,
-      "command_name": "kpop"
-    }
-  ],
-  "playlists": [
-    {
-      "id": 1,
-      "title": "SAOKO - ROSALÍA",
-      "image_url": "../assets/content/card-icon.svg",
-      "duration": "02:27",
-      "created_at": "",
-      "created_by": "Chico de Loba"
-    },
-    {
-      "id": 2,
-      "title": "SAOKO - ROSALÍA",
-      "image_url": "../assets/content/card-icon.svg",
-      "duration": "02:27",
-      "created_at": "",
-      "created_by": "Chico de Loba"
-    },
-    {
-      "id": 3,
-      "title": "SAOKO - ROSALÍA",
-      "image_url": "../assets/content/card-icon.svg",
-      "duration": "02:27",
-      "created_at": "",
-      "created_by": "Chico de Loba"
-    },
-    {
       "id": 4,
-      "title": "SAOKO - ROSALÍA",
-      "image_url": "../assets/content/card-icon.svg",
-      "duration": "02:27",
-      "created_at": "",
-      "created_by": "Chico de Loba"
+      "playlist_title": "rock pesado",
+      "command_name": "rockpesado"
     },
     {
       "id": 5,
-      "title": "SAOKO - ROSALÍA",
-      "image_url": "../assets/content/card-icon.svg",
-      "duration": "02:27",
-      "created_at": "",
-      "created_by": "Chico de Loba"
+      "playlist_title": "kpop",
+      "command_name": "kpop"
     },
     {
       "id": 6,
-      "title": "SAOKO - ROSALÍA",
-      "image_url": "../assets/content/card-icon.svg",
-      "duration": "02:27",
-      "created_at": "",
-      "created_by": "Chico de Loba"
+      "playlist_title": "circo de metaleiro",
+      "command_name": "circometal"
     }
-  ]
+  ],
+  "playlists": {
+    "chico": [
+      {
+        "id": 1,
+        "title": "SAOKO - ROSALÍA",
+        "image_url": "../assets/content/card-icon.svg",
+        "duration": "02:27",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 2,
+        "title": "SAOKO - ROSALÍA",
+        "image_url": "../assets/content/card-icon.svg",
+        "duration": "02:27",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 3,
+        "title": "SAOKO - ROSALÍA",
+        "image_url": "../assets/content/card-icon.svg",
+        "duration": "02:27",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 4,
+        "title": "SAOKO - ROSALÍA",
+        "image_url": "../assets/content/card-icon.svg",
+        "duration": "02:27",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 5,
+        "title": "SAOKO - ROSALÍA",
+        "image_url": "../assets/content/card-icon.svg",
+        "duration": "02:27",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 6,
+        "title": "SAOKO - ROSALÍA",
+        "image_url": "../assets/content/card-icon.svg",
+        "duration": "02:27",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      }
+    ],
+    "helena": [
+      {
+        "id": 1,
+        "title": "Hayloft II - Mother Mother",
+        "image_url": "https://i.scdn.co/image/ab67616d00001e02ac91ecc149d3fb876f117a84",
+        "duration": "03:35",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 2,
+        "title": "Seven - Mother Mother",
+        "image_url": "https://i.scdn.co/image/ab67616d00001e02ac91ecc149d3fb876f117a84",
+        "duration": "03:35",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 3,
+        "title": "Sick of The Silence - Mother Mother",
+        "image_url": "https://i.scdn.co/image/ab67616d00001e02ac91ecc149d3fb876f117a84",
+        "duration": "03:35",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 4,
+        "title": "Pure Love - Mother Mother",
+        "image_url": "https://i.scdn.co/image/ab67616d00001e02ac91ecc149d3fb876f117a84",
+        "duration": "03:35",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 5,
+        "title": "I Got Love - Mother Mother",
+        "image_url": "https://i.scdn.co/image/ab67616d00001e02ac91ecc149d3fb876f117a84",
+        "duration": "03:35",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      },
+      {
+        "id": 6,
+        "title": "Stay Behind - Mother Mother",
+        "image_url": "https://i.scdn.co/image/ab67616d00001e02ac91ecc149d3fb876f117a84",
+        "duration": "03:35",
+        "created_at": "",
+        "created_by": "Chico de Loba"
+      }
+    ]
+  }
 }
