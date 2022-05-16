@@ -1,12 +1,12 @@
 <template>
   <div class="home-content">
     <div class="commands-box">
-      <ul
-        class="commands-box-list"
-        v-for="(command, key) in commands"
-        :key="command.id"
-      >
-        <li :style="{ background: `var(${colors[key % colors.length]})` }">
+      <ul class="commands-box-list">
+        <li
+          v-for="(command, key) in commands"
+          :key="command.id"
+          :style="{ background: `var(${colors[key % colors.length]})` }"
+        >
           <div class="command">
             <span>{{ command.playlist_title }}</span>
             <i>

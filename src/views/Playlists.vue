@@ -3,116 +3,21 @@
     <div class="playlists-list">
       <h1 class="playlists-list-title">/CHICO</h1>
       <ul class="list-content">
-        <li>
+        <li v-for="item in playlists['chico']" :key="item.id">
           <div class="list-card">
             <div class="list-card-title">
-              <h2>SAOKO - ROSALÍA</h2>
+              <h2>{{item.title}}</h2>
               <button type="button">
                 <i><img src="../assets/trash-can.svg" alt="Deletar Ícone" /></i>
               </button>
             </div>
             <div class="list-card-content">
               <div class="list-card-icon">
-                <img src="../assets/content/card-icon.svg" alt="Ícone" />
+                <img :src="item.image_url" alt="Ícone" />
               </div>
               <div class="list-card-info">
-                <p>Duração: <span>02:17</span></p>
-                <p>Adicionado por: <span>Chico de Loba</span></p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="list-card">
-            <div class="list-card-title">
-              <h2>SAOKO - ROSALÍA</h2>
-              <button type="button">
-                <i><img src="../assets/trash-can.svg" alt="Deletar Ícone" /></i>
-              </button>
-            </div>
-            <div class="list-card-content">
-              <div class="list-card-icon">
-                <img src="../assets/content/card-icon.svg" alt="Ícone" />
-              </div>
-              <div class="list-card-info">
-                <p>Duração: <span>02:17</span></p>
-                <p>Adicionado por: <span>Chico de Loba</span></p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="list-card">
-            <div class="list-card-title">
-              <h2>SAOKO - ROSALÍA</h2>
-              <button type="button">
-                <i><img src="../assets/trash-can.svg" alt="Deletar Ícone" /></i>
-              </button>
-            </div>
-            <div class="list-card-content">
-              <div class="list-card-icon">
-                <img src="../assets/content/card-icon.svg" alt="Ícone" />
-              </div>
-              <div class="list-card-info">
-                <p>Duração: <span>02:17</span></p>
-                <p>Adicionado por: <span>Chico de Loba</span></p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="list-card">
-            <div class="list-card-title">
-              <h2>SAOKO - ROSALÍA</h2>
-              <button type="button">
-                <i><img src="../assets/trash-can.svg" alt="Deletar Ícone" /></i>
-              </button>
-            </div>
-            <div class="list-card-content">
-              <div class="list-card-icon">
-                <img src="../assets/content/card-icon.svg" alt="Ícone" />
-              </div>
-              <div class="list-card-info">
-                <p>Duração: <span>02:17</span></p>
-                <p>Adicionado por: <span>Chico de Loba</span></p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="list-card">
-            <div class="list-card-title">
-              <h2>SAOKO - ROSALÍA</h2>
-              <button type="button">
-                <i><img src="../assets/trash-can.svg" alt="Deletar Ícone" /></i>
-              </button>
-            </div>
-            <div class="list-card-content">
-              <div class="list-card-icon">
-                <img src="../assets/content/card-icon.svg" alt="Ícone" />
-              </div>
-              <div class="list-card-info">
-                <p>Duração: <span>02:17</span></p>
-                <p>Adicionado por: <span>Chico de Loba</span></p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="list-card">
-            <div class="list-card-title">
-              <h2>SAOKO - ROSALÍA</h2>
-              <button type="button">
-                <i><img src="../assets/trash-can.svg" alt="Deletar Ícone" /></i>
-              </button>
-            </div>
-            <div class="list-card-content">
-              <div class="list-card-icon">
-                <img src="../assets/content/card-icon.svg" alt="Ícone" />
-              </div>
-              <div class="list-card-info">
-                <p>Duração: <span>02:17</span></p>
-                <p>Adicionado por: <span>Chico de Loba</span></p>
+                <p>Duração: <span>{{item.duration}}</span></p>
+                <p>Adicionado por: <span>{{item.created_by}}</span></p>
               </div>
             </div>
           </div>
@@ -124,8 +29,19 @@
 </template>
 
 <script>
+import api from "@/services/api";
+import { onMounted, ref } from "vue";
 export default {
   name: "Playlists",
+  setup() {
+    const playlists = ref([]);
+    const fecthPlaylists = () =>
+      api.get("/playlists").then(({ data }) => (playlists.value = data));
+    onMounted(fecthPlaylists);
+    return {
+      playlists,
+    };
+  },
 };
 </script>
 
@@ -174,6 +90,14 @@ export default {
             justify-content: space-around;
             align-items: center;
             padding: 1rem 0;
+            .list-card-icon{
+              img{
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
             .list-card-info {
               p,
               span {
