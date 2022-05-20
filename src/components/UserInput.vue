@@ -3,12 +3,18 @@
     type="text"
     class="userInput"
     placeholder="insira aqui um link ou título"
+    :disabled="!disabled"
   />
 </template>
 
 <script>
 export default {
   name: "UserInput",
+  props: {
+    disabled: {
+      type: Boolean,
+    },
+  },
 };
 </script>
 

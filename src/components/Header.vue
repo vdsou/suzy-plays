@@ -1,11 +1,13 @@
 <template>
   <header>
     <Nav />
-    <UserInput class="center" />
+    <UserInput class="center" :disabled="logged" />
   </header>
 </template>
 
 <script>
+import { useStore } from "@/store";
+import { computed } from "vue";
 import Nav from "./Nav.vue";
 import UserInput from "./UserInput.vue";
 export default {
@@ -13,7 +15,11 @@ export default {
     Nav,
     UserInput,
   },
-  data() {},
+  setup() {
+    const store = useStore();
+    const logged = computed(() => store.logged);
+    return { logged };
+  },
 };
 </script>
 
