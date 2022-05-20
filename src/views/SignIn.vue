@@ -5,9 +5,17 @@
         <h1>BOAS VINDAS</h1>
         <img src="../assets/suzy-plays.svg" alt="" />
       </div>
-      <form action="" class="signin-form">
-        <input type="text" placeholder="insira seu usuário" />
-        <input type="password" placeholder="insira sua senha" />
+      <form @submit.prevent="userSignIn" class="signin-form">
+        <input
+          type="text"
+          placeholder="insira seu usuário"
+          v-model="username"
+        />
+        <input
+          type="password"
+          placeholder="insira sua senha"
+          v-model="password"
+        />
         <button type="submit">ENTRAR</button>
       </form>
       <p>Não é cadastrado? <a href="/signup">Clique aqui</a></p>
@@ -16,8 +24,25 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { useStore } from "@/store";
+
 export default {
   name: "SignIn",
+  setup() {
+    const store = useStore();
+    const username = ref("");
+    const password = ref("");
+    const userSignIn = () => {
+      const test = store.signIn({ username: username.value, password: password.value });
+      console.log(test);
+    };
+    return {
+      username,
+      password,
+      userSignIn,
+    };
+  },
 };
 </script>
 

@@ -1,4 +1,9 @@
 {
+  "users":{
+    "username": "admin",
+    "email": "admin@suzy.com",
+    "password": "123456"
+  },
   "commands": [
     {
       "id": 1,
