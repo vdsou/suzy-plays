@@ -23,6 +23,8 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   color: var(--white-color);
+  transition: all ease 200ms;
+
 }
 *::-webkit-scrollbar {
   width: 1rem;
@@ -62,4 +64,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+input {
+  opacity: 0.9;
+}
+input:hover{
+  opacity: 1;
+}
+input:focus{
+  opacity: 1;
 }
