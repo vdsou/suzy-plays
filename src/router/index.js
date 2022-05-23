@@ -14,7 +14,7 @@ const routes = [
     meta: { private: true },
   },
   {
-    path: "/playlists",
+    path: "/playlists/:command_name",
     name: "Playlists",
     component: Playlists,
     meta: { private: true },
@@ -58,9 +58,7 @@ router.beforeEach((to, from, next) => {
   const store = useStore();
   if (to.meta.private && !store.logged) {
     next("/signin");
-  }
-  else if (!to.meta.private && store.logged) {
-    console.log(to);
+  } else if (!to.meta.private && store.logged) {
     next("/");
   } else {
     next();
