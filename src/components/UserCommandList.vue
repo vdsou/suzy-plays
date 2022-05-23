@@ -8,7 +8,7 @@
           :style="{ background: `var(${colors[key % colors.length]})` }"
         >
           <div class="command">
-            <span>{{ command.playlist_title }}</span>
+            <a href="#">{{ command.playlist_title }}</a>
             <i>
               <button type="button">
                 <img src="../assets/trash-can.svg" alt="" />
@@ -70,16 +70,24 @@ export default {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      span {
+      a {
         color: var(--text-links-color);
         font-weight: bold;
         font-size: 1.8rem;
       }
       button {
         background: none;
+        padding: 1rem;
         cursor: pointer;
         display: flex;
+        &:hover {
+          transform: skew(-0.06turn, 18deg);
+        }
       }
+    }
+    &:hover {
+      transform: scale(1.01);
+      margin-left: 1rem;
     }
   }
 }
