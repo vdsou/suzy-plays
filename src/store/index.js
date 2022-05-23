@@ -13,7 +13,10 @@ export const useStore = defineStore("user", {
         this.logged = true;
         return this.logged;
       }
-      return this.logged
+      return this.logged;
+    },
+    signOut() {
+      this.logged = false;
     },
   },
 });

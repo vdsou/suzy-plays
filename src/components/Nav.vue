@@ -18,7 +18,7 @@
           <router-link to="/about">Sobre</router-link>
         </li>
         <li>
-          <router-link to="/leave">Sair</router-link>
+          <router-link to="#" @click="leave">Sair</router-link>
         </li>
       </ul>
     </div>
@@ -34,12 +34,20 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { useStore } from "@/store";
+
 export default {
   name: "Nav",
-  components: {},
-  data() {
+  setup() {
+    const store = useStore();
+    const showMenu = ref(false);
+    const leave = () => {
+      store.signOut();
+    };
     return {
-      showMenu: false,
+      showMenu,
+      leave,
     };
   },
 };

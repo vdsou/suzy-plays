@@ -10,6 +10,7 @@
           type="text"
           placeholder="insira seu usuário"
           v-model="username"
+          ref="usernameInput"
         />
         <input
           type="password"
@@ -24,21 +25,28 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 import { useStore } from "@/store";
 
 export default {
   name: "SignIn",
   setup() {
+    const router = useRouter();
     const store = useStore();
     const username = ref("");
     const password = ref("");
+    const usernameInput = ref(null);
     const userSignIn = () => {
-      const test = store.signIn({ username: username.value, password: password.value });
-      console.log(test);
+      store.signIn({ username: username.value, password: password.value });
+      router.push("/");
     };
+
+    onMounted(() => usernameInput.value.focus());
+
     return {
       username,
+      usernameInput,
       password,
       userSignIn,
     };
