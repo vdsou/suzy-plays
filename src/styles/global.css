@@ -24,7 +24,6 @@
   font-family: "Inter", sans-serif;
   color: var(--white-color);
   transition: all ease 200ms;
-
 }
 *::-webkit-scrollbar {
   width: 1rem;
@@ -65,12 +64,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-input {
+button {
+  cursor: pointer;
+}
+input,
+button {
   opacity: 0.9;
 }
-input:hover{
+input:hover,
+button:hover {
   opacity: 1;
 }
-input:focus{
+input:focus {
   opacity: 1;
 }

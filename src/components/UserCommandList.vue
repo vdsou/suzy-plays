@@ -8,7 +8,9 @@
           :style="{ background: `var(${colors[key % colors.length]})` }"
         >
           <div class="command">
-            <a href="#">{{ command.playlist_title }}</a>
+            <router-link :to="`/playlists/${command.command_name}`">{{
+              command.playlist_title
+            }}</router-link>
             <i>
               <button type="button">
                 <img src="../assets/trash-can.svg" alt="" />
@@ -86,7 +88,7 @@ export default {
       }
     }
     &:hover {
-      transform: scale(1.01);
+      transform: scale(1.03);
       margin-left: 1rem;
     }
   }
