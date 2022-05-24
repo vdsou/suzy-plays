@@ -76,6 +76,9 @@ export default {
         color: var(--text-links-color);
         font-weight: bold;
         font-size: 1.8rem;
+        &:hover {
+          color: #0c2461;
+        }
       }
       button {
         background: none;
