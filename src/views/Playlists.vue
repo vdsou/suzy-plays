@@ -30,7 +30,10 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="playlist-list-save-button">Salvar</button>
+    <div class="buttons">
+      <button type="button" class="playlist-list-save-button">Salvar</button>
+      <button type="button" class="playlist-list-delete-button">Excluir</button>
+    </div>
   </div>
 </template>
 
@@ -158,15 +161,31 @@ export default {
       }
     }
   }
-  .playlist-list-save-button {
+  .playlist-list-save-button,
+  .playlist-list-delete-button {
     background: var(--green-color-3);
-    padding: 1.5rem;
-    width: 10rem;
+    padding: 1rem;
+    width: 9.6rem;
     border-radius: 0.5rem;
     color: var(--text-links-color);
     font-weight: bold;
     font-size: 1.4rem;
-    margin: 2rem 0;
+    margin: 2rem;
+    box-shadow: 5px 5px 13px -8px #0a3d62;
+    &:hover {
+      border: 0.1rem solid var(--white-color);
+    }
+  }
+  .playlist-list-save-button {
+    border: 0.1rem solid var(--green-color-3);
+    &:hover {
+      border: 0.1rem solid var(--text-links-color);
+    }
+  }
+  .playlist-list-delete-button {
+    background: var(--danger-color);
+    border: 0.1rem solid var(--danger-color);
+    color: var(--white-color);
   }
 }
 </style>
