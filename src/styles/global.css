@@ -64,6 +64,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+input {
+  box-shadow: 5px 5px 13px -8px #0a3d62;
+}
 button {
   cursor: pointer;
 }
