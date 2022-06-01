@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, onBeforeMount } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "@/store";
 
@@ -37,13 +37,20 @@ export default {
     const username = ref("");
     const password = ref("");
     const usernameInput = ref(null);
-    const userSignIn = () => {
-      store.signIn({ username: username.value, password: password.value });
+    const userSignIn = async () => {
+      await store.signIn({
+        username: username.value,
+        password: password.value,
+      });
+
       router.push("/");
     };
-
     onMounted(() => usernameInput.value.focus());
-
+    onBeforeMount(() => {
+      if (store.userLoggedIn) {
+        router.push("/");
+      }
+    });
     return {
       username,
       usernameInput,

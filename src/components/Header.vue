@@ -1,7 +1,7 @@
 <template>
   <header>
     <Nav />
-    <UserInput class="center" :disabled="logged" />
+    <UserInput class="center" :disabled="userLoggedIn" />
   </header>
 </template>
 
@@ -17,8 +17,8 @@ export default {
   },
   setup() {
     const store = useStore();
-    const logged = computed(() => store.logged);
-    return { logged };
+    const userLoggedIn = computed(() => store.userLoggedIn);
+    return { userLoggedIn };
   },
 };
 </script>

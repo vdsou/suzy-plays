@@ -56,9 +56,9 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const store = useStore();
-  if (to.meta.private && !store.logged) {
+  if (to.meta.private && !store.userLoggedIn) {
     next("/signin");
-  } else if (!to.meta.private && store.logged) {
+  } else if (!to.meta.private && store.userLoggedIn) {
     next("/");
   } else {
     next();
